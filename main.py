@@ -121,6 +121,7 @@ class Trainer(object):
         label_result = torch.cat(label_result)
         pred_result = torch.cat(pred_result)
 
+
         p, r, f1, _ = precision_recall_fscore_support(label_result.numpy(),
                                                       pred_result.numpy(),
                                                       average="macro")
